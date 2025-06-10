@@ -43,6 +43,9 @@ def run():
                 else:
                     performed = False
                     cv2.putText(frame, f"❌ {current_exercise.name}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
+                if hasattr(current_exercise, "draw"):
+                    current_exercise.draw(frame)
+
 
         cv2.putText(frame, f"Exercise: {current_exercise.name}", (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,0), 2)
         cv2.putText(frame, f"Reps: {reps}/10", (10, 140), cv2.FONT_HERSHEY_SIMPLEX, 1, (200,200,200), 2)
