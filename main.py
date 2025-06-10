@@ -1,7 +1,10 @@
 # rehab_app/main.py
 import sys
-
+import os
 def main():
+    
+    print("Current working dir:", os.getcwd())
+
     print("Choose rehab mode:")
     print("1 - Hand Exercises")
     print("2 - Arm Exercises")
